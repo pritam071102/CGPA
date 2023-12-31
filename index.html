@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA to percentage</title>
+</head>
+<!-- Linking bootstrap and css file -->
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="style.css">
+
+<!-- linking js file -->
+<script src="app.js"></script>
+
+<body>
+    <!-- Adding Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+    <!-- Adding Tab bar -->
+    <ul class="nav nav-tabs" style="padding: 4px;" id="demo">
+        <li class="nav-item">
+            <a href="index.html" class="nav-link" data-bs-toggle="tab">
+              <b><i style="color: aliceblue;">Home</i></b>
+            </a>
+        </li>
+        <li class="nav-item"><a href="about.html" class="nav-link" data-bs-toggle="tab"><i style="color: aliceblue;">About us</i></a></li>
+        <li class="nav-item"><a href="#foot" class="nav-link" data-bs-toggle="tab"><i style="color: aliceblue;">Contact us</i></a></li>
+        <li class="nav-item"><a
+            href="https://docs.google.com/forms/d/1S-wkp877wLfh0xrgBa_aXv2V_bEC-yqMN6Ap08WMSGg/edit?pli=1#responses"
+            class="nav-link" data-bs-toggle="tab"><i style="color: aliceblue;">Share your feedback</i></a></li>
+    </ul>
+
+    <!-- Adding Heading -->
+
+    <div class="container">
+        <div class="row p-4">
+            <div class="col-3"></div>
+            <div class="display-4 col-6">CGPA to percentage Calculator</div>
+        </div>
+        <!-- Adding calculator -->
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-sm-6">
+                <!-- card 0 -->
+                <div class="card" style="background-color: rgb(215, 198, 174);">
+                    <div class="card-body">
+                        <label>Enter Your CGPA here :
+                            <input class="mx-md-3" type="number" id="cgpa" placeholder="Choose between 0-10">
+                        </label>
+                    </div>
+                    <div class="card-footer"> <button onclick="f()" class="btn btn-outline-danger">Calculate</button>
+                    </div>
+                    <div class="card-body">
+                        Your Percentage is :<p id="changeable"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Adding Heading -->
+
+        <div class="container">
+            <div class="row p-4">
+                <div class="col-3"></div>
+                <div class="display-4 col-6">Explore More Features</div>
+            </div>
+            <!-- Adding another tools -->
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-sm-4">
+                    <!-- card 1 -->
+                    <div class="card" style="background-color: rgb(215, 198, 174);">
+                        <div class="card-body">Percentage to CGPA calculator</div>
+                        <div class="card-footer"><button id="view" onclick="f1()"
+                                class="btn btn-outline-danger">View</button>
+                            <button onclick="f11()" id="hide" class="btn btn-outline-secondary"
+                                style="display: none;">Hide</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Adding calculator -->
+                <div class="row" id="gap" style="display: none;">
+                    <div class="col-3"><br></div>
+                </div>
+                <div class="row">
+                    <div class="col-3"></div>
+                    <div class="col-sm-6">
+                        <!-- card 2 -->
+                        <div class="card" style="background-color: rgb(215, 198, 174); display: none;">
+                            <div class="card-body">
+                                <label>Enter Your Percentage here :
+                                    <input class="mx-md-3" type="number" id="percentage"
+                                        placeholder="Choose between 0-100">
+                                </label>
+                            </div>
+                            <div class="card-footer"> <button onclick="f3()"
+                                    class="btn btn-outline-info">Calculate</button></div>
+                            <div class="card-body">
+                                Your CGPA is :<p id="changeable1"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3"><br></div>
+                </div>
+
+                <!-- Scholarship tools -->
+                <div class="row" id="quick">
+                    <div class="col-3"></div>
+                    <div class="col-sm-4">
+                        <!-- card 3 -->
+                        <div class="card" style="background-color: rgb(215, 198, 174);">
+                            <div class="card-body">Are you eligiible for SVMCM Scholarship ?</div>
+                            <div class="card-footer"><button onclick="f2()" id="view1"
+                                    class="btn btn-outline-danger">View</button>
+                                <button onclick="f22()" id="hide1" class="btn btn-outline-secondary"
+                                    style="display: none;">Hide</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Adding scholarship percentage -->
+                <div class="row" id="gap1" style="display: none;">
+                    <div class="col-3"><br></div>
+                </div>
+                <div class="row">
+                    <div class="col-3"></div>
+                    <div class="col-sm-6">
+                        <!-- card 4 -->
+                        <div class="card" style="background-color: rgb(215, 198, 174); display: none;">
+                            <div class="card-body">
+                                <label>Enter Your Odd semester CGPA here :
+                                    <input class="mx-md-3" type="number" id="odd" placeholder="Choose between 0-10">
+                                </label>
+                            </div>
+                            <div class="card-body">
+                                <label>Enter Your Even semester CGPA here :
+                                    <input class="mx-md-3" type="number" id="even" placeholder="Choose between 0-10">
+                                </label>
+                            </div>
+                            <div class="card-footer"> <button onclick="f4()"
+                                    class="btn btn-outline-info">Calculate</button></div>
+                            <div class="card-body">
+                                Your percntage is :<p id="changeable2"></p>
+                                You are <p id="changeable3"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-3"><br></div>
+                </div>
+
+                <!-- Scholarship tools -->
+                <div class="row" id="quick">
+                    <div class="col-3"></div>
+                    <div class="col-sm-4">
+                        <!-- card 5 -->
+                        <div class="card" style="background-color: rgb(215, 198, 174);">
+                            <div class="card-body">How far you are from SVMCM Scholarship ?</div>
+                            <div class="card-footer"><button onclick="f6()" id="view2"
+                                    class="btn btn-outline-danger">View</button>
+                                <button onclick="f66()" id="hide2" style="display: none;"
+                                    class="btn btn-outline-secondary">Hide</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card 6 -->
+                <div class="row" id="gap2" style="display: none;">
+                    <div class="col-3"><br></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3"></div>
+                    <div class="col-md-5">
+                        <div class="card" style="background-color: rgb(215, 198, 174); display: none;">
+                            <div class="card-body">
+                                <label>Enter Your Odd sem CGPA here :
+                                    <input class="mx-md-3" type="number" id="oddsem" placeholder="Choose between 0-10">
+                                </label>
+                            </div>
+                            <div class="card-footer"> <button onclick="f5()"
+                                    class="btn btn-outline-info">Calculate</button></div>
+                            <div class="card-body">
+                              In the next semester you have to get minimum CGPA : <p id="changeable4"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<br>
+    <footer id="foot">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-3">
+                <p style="text-align: center; color: white;">&copy; 2023 Pritam Kundu</p>
+            </div>
+        </div>
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-2"><a href="https://www.facebook.com/profile.php?id=100034281213509&mibextid=ZbWKwL"
+                    target="_main"><img src="images/fb.png" style="width: 50px; height: 50px;"></a></div>
+                <div class="col-2"><a href="https://github.com/pritam071102" target="_main"><img src="images/git.png"
+                    style="width: 50px; height: 50px;"></a></div>
+                    <div class="col-2"><a href="https://instagram.com/pritam_kundu0711?igshid=ZDc4ODBmNjlmNQ==" target="_main"><img
+                        src="images/insta.jpg" style="width: 50px; height: 50px; border-radius: 50%;"></a></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4"></div>
+                <div class="col-2"><a href="https://in.linkedin.com/" target="_main"><img src="images/linkdin.jpg"
+                    style="width: 50px; height: 50px; border-radius: 50%;"></a></div>
+                    <div class="col-2"><a href="https://twitter.com/i/flow/login?redirect_after_login=%2Flogin%3Flang%3Den"
+                        target="_main"><img src="images/twitter.jpg" style="width: 50px; height: 50px; border-radius: 50%;"></a></div>
+            </div>
+        </div>
+        </footer>      
+        
+</body>
+
+</html>

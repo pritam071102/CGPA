@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: rgb(231, 222, 212);
+    font-family: 'Roboto', sans-serif;
+}
+
+#demo {
+    background-color: rgb(209, 158, 91);
+    overflow-x: hidden;
+}
