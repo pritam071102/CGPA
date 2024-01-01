@@ -2,8 +2,10 @@
 function f() {
     let a = document.getElementById("cgpa").value;
     let b = (a - 0.75) * 10;
-    if (a >= 0.75 && a <= 10)
+    if (a >= 0.75 && a < 10)
         document.getElementById("changeable").innerHTML = b + "%";
+    else if (a == 10)
+        document.getElementById("changeable").innerHTML = "100" + "%";
     else
         document.getElementById("changeable").innerHTML = "null";
 }
@@ -102,13 +104,13 @@ function f5() {
     }
 }
 
-function F1(){
+function F1() {
 
-    window.location.href="https://my-info-2bzhegoy0-pritam071102.vercel.app";
+    window.location.href = "https://my-info-2bzhegoy0-pritam071102.vercel.app";
 }
-function F2(){
-    window.location.href="https://pritam071102.github.io/MusicPlayer/";
+function F2() {
+    window.location.href = "https://pritam071102.github.io/MusicPlayer/";
 }
-function F3(){
-    window.location.href="https://pritam071102.github.io/Bolg-on-stock-market-crash/";
+function F3() {
+    window.location.href = "https://pritam071102.github.io/Bolg-on-stock-market-crash/";
 }
